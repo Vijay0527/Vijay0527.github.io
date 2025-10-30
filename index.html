@@ -7,100 +7,112 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0f0f1a;
-      --text: #e0e0ff;
-      --accent: #6e56cf;
-      --card: #1a1a2e;
-      --border: #333355;
-    }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #ffffff;
+      color: #1a1a1a;
       line-height: 1.7;
-      padding: 20px;
+      padding: 40px 20px;
     }
     .container {
       max-width: 800px;
-      margin: 40px auto;
+      margin: 0 auto;
       text-align: center;
     }
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid var(--accent);
-      margin: 20px auto;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(110, 86, 207, 0.4);
-      transition: transform 0.3s;
-    }
-    .profile-img:hover { transform: scale(1.05); }
     h1 {
-      font-size: 2.5rem;
-      margin: 15px 0;
-      background: linear-gradient(90deg, #6e56cf, #a78bff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    .title {
+      font-size: 1.3rem;
+      color: #7f8c8d;
+      font-weight: 400;
+      margin-bottom: 40px;
     }
     h2 {
       font-size: 1.8rem;
-      margin: 30px 0 15px;
-      color: var(--accent);
+      color: #3498db;
+      margin: 50px 0 20px;
       position: relative;
     }
     h2::after {
       content: '';
-      width: 60px;
+      width: 50px;
       height: 3px;
-      background: var(--accent);
+      background: #3498db;
       display: block;
       margin: 10px auto;
       border-radius: 2px;
     }
-    p { font-size: 1.1rem; margin: 15px 0; }
-    ul { list-style: none; padding: 0; }
-    ul li {
-      background: var(--card);
-      margin: 10px 0;
-      padding: 12px 20px;
-      border-radius: 10px;
-      border-left: 4px solid var(--accent);
-      transition: transform 0.2s, box-shadow 0.2s;
+    p {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      margin: 15px 0;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    ul li:hover {
-      transform: translateX(5px);
-      box-shadow: 0 5px 15px rgba(110, 86, 207, 0.2);
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background: #f8f9fa;
+      margin: 12px 0;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border-left: 4px solid #3498db;
+      text-align: left;
+      font-size: 1.05rem;
+    }
+    .contact {
+      margin: 40px 0;
     }
     .contact a {
-      color: var(--text);
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
       text-decoration: none;
-      margin: 0 12px;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
     }
-    .contact a:hover { color: var(--accent); }
+    .contact a:hover {
+      background: #2980b9;
+    }
+    .resume-btn {
+      background: #e74c3c;
+    }
+    .resume-btn:hover {
+      background: #c0392b;
+    }
     .footer {
-      margin-top: 50px;
+      margin-top: 80px;
       font-size: 0.9rem;
-      color: #888;
+      color: #95a5a6;
     }
+    .footer span {
+      color: #e74c3c;
+    }
+
     @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      .profile-img { width: 110px; height: 110px; }
+      h1 { font-size: 2.2rem; }
+      .title { font-size: 1.1rem; }
+      .contact a { display: block; margin: 10px 0; }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <!-- Profile Photo (Replace with your image) -->
-    <img src="profile.jpg" alt="Vijaya Krishna" class="profile-img" 
-         onerror="this.src='https://via.placeholder.com/140?text=VK';">
-    
     <h1>Vijaya Krishna</h1>
-    <p><strong>Software Engineer</strong></p>
+    <div class="title">Frontend Developer</div>
 
     <h2>About Me</h2>
     <p>
@@ -120,20 +132,29 @@
 
     <h2>Projects</h2>
     <ul>
-      <li><strong>Real-Time Attendance Using Face Recognition</strong>: A system that marks attendance automatically using Python (Flask), OpenCV, and TensorFlow, with a web interface and SMS notifications.</li>
-      <li><strong>Taskify</strong>: A to-do list web app built using HTML, CSS, and JavaScript that helps users organize and track daily tasks easily.</li>
+      <li>
+        <strong>Real-Time Attendance Using Face Recognition</strong>: 
+        A system that marks attendance automatically using Python (Flask), OpenCV, and TensorFlow, with a web interface and SMS notifications.
+      </li>
+      <li>
+        <strong>Taskify</strong>: 
+        A to-do list web app built using HTML, CSS, and JavaScript that helps users organize and track daily tasks easily.
+        <a href="https://github.com/Vijay0527/taskify" target="_blank" style="color:#3498db; margin-left:8px; text-decoration:underline;">GitHub</a>
+      </li>
     </ul>
 
     <h2>Contact</h2>
     <div class="contact">
-      <a href="mailto:vijayakrishnadavu@gmail.com">📧 Email</a> • 
-      <a href="tel:+919493184699">📱 +91 9493184699</a> • 
-      <a href="https://github.com/Vijay0527" target="_blank">🐙 GitHub</a>
+      <a href="mailto:vijayakrishnadavu@gmail.com">Email</a>
+      <a href="tel:+919493184699">+91 9493184699</a>
+      <a href="https://github.com/Vijay0527" target="_blank">GitHub</a>
+      <a href="resume.pdf" download class="resume-btn">Download Resume</a>
     </div>
 
     <div class="footer">
-      &copy; 2025 Vijaya Krishna. Built with ❤️ and GitHub Pages.
+      © 2025 Vijaya Krishna. Built with <span>❤️</span> and GitHub Pages.
     </div>
   </div>
+
 </body>
 </html>
