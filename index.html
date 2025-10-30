@@ -2,103 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vijaya Krishna | Software Engineer</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+    :root {
+      --bg: #0f0f1a;
+      --text: #e0e0ff;
+      --accent: #6e56cf;
+      --card: #1a1a2e;
+      --border: #333355;
     }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      background: #f8f9fa;
-      color: #222;
-    }
-
-    header {
-      background: #1a73e8;
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #1a73e8;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #1a73e8;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    p, li {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 8px;
-    }
-
-    ul {
-      list-style: none;
-      margin-top: 10px;
-    }
-
-    ul li::before {
-      content: "• ";
-      color: #1a73e8;
-      font-weight: bold;
-    }
-
-    .contact a {
-      color: #1a73e8;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-
-    footer {
-      text-align: center;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
       padding: 20px;
-      background: #1a73e8;
-      color: white;
-      margin-top: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      margin: 20px auto;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(110, 86, 207, 0.4);
+      transition: transform 0.3s;
+    }
+    .profile-img:hover { transform: scale(1.05); }
+    h1 {
+      font-size: 2.5rem;
+      margin: 15px 0;
+      background: linear-gradient(90deg, #6e56cf, #a78bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 30px 0 15px;
+      color: var(--accent);
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      display: block;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+    p { font-size: 1.1rem; margin: 15px 0; }
+    ul { list-style: none; padding: 0; }
+    ul li {
+      background: var(--card);
+      margin: 10px 0;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    ul li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(110, 86, 207, 0.2);
+    }
+    .contact a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    .contact a:hover { color: var(--accent); }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .profile-img { width: 110px; height: 110px; }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="container">
+    <!-- Profile Photo (Replace with your image) -->
+    <img src="profile.jpg" alt="Vijaya Krishna" class="profile-img" 
+         onerror="this.src='https://via.placeholder.com/140?text=VK';">
+    
     <h1>Vijaya Krishna</h1>
-    <p>Software Engineer</p>
-  </header>
+    <p><strong>Software Engineer</strong></p>
 
-  <section>
     <h2>About Me</h2>
     <p>
-      I’m a passionate and dedicated Software Engineer with a strong interest in building practical and user-friendly applications.
-      I enjoy learning new technologies and applying them to create efficient and reliable solutions.
-      My goal is to grow as a developer and contribute to innovative software projects.
+      I’m a passionate and dedicated Software Engineer with a strong interest in building 
+      practical and user-friendly applications. I enjoy learning new technologies and 
+      applying them to create efficient and reliable solutions. My goal is to grow as a 
+      developer and contribute to innovative software projects.
     </p>
-  </section>
 
-  <section>
     <h2>Skills</h2>
     <ul>
       <li>Python</li>
@@ -106,25 +117,23 @@
       <li>HTML, CSS, JavaScript</li>
       <li>React.js</li>
     </ul>
-  </section>
 
-  <section>
     <h2>Projects</h2>
     <ul>
-      <li><strong>Real-Time Attendance Using Face Recognition:</strong> A system that marks attendance automatically using Python (Flask), OpenCV, and TensorFlow, with a web interface and SMS notifications.</li>
-      <li><strong>Taskify:</strong> A to-do list web app built using HTML, CSS, and JavaScript that helps users organize and track daily tasks easily.</li>
+      <li><strong>Real-Time Attendance Using Face Recognition</strong>: A system that marks attendance automatically using Python (Flask), OpenCV, and TensorFlow, with a web interface and SMS notifications.</li>
+      <li><strong>Taskify</strong>: A to-do list web app built using HTML, CSS, and JavaScript that helps users organize and track daily tasks easily.</li>
     </ul>
-  </section>
 
-  <section class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:vijayakrishnadavu@gmail.com">vijayakrishnadavu@gmail.com</a></p>
-    <p>Phone: <a href="tel:9493184699">9493184699</a></p>
-    <p>GitHub: <a href="https://github.com/Vijay0527" target="_blank">github.com/Vijay0527</a></p>
-  </section>
+    <div class="contact">
+      <a href="mailto:vijayakrishnadavu@gmail.com">📧 Email</a> • 
+      <a href="tel:+919493184699">📱 +91 9493184699</a> • 
+      <a href="https://github.com/Vijay0527" target="_blank">🐙 GitHub</a>
+    </div>
 
-  <footer>
-    <p>© 2025 Vijaya Krishna. All rights reserved.</p>
-  </footer>
+    <div class="footer">
+      &copy; 2025 Vijaya Krishna. Built with ❤️ and GitHub Pages.
+    </div>
+  </div>
 </body>
 </html>
